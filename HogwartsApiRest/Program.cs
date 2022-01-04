@@ -16,7 +16,7 @@ builder.Services.AddTransient<IStudentRepository, StudentRepository>()
     .AddTransient<IStudentService, StudentService>();
 
 builder.Services.AddDbContext<HogwartsApiRestDbContext>(opt =>
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection"), b => b.MigrationsAssembly("HogwartsApiRest")));
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection")));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
